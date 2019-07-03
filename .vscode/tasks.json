@@ -7,30 +7,9 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/DNC.Reminder/Reminder.Cli/Reminder.Cli.csproj"
+                "${workspaceFolder}/DNC.Reminder/Reminder.Web/Reminder.Web.csproj"
             ],
             "problemMatcher": "$tsc"
         },
-        {
-            "label": "publish",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "publish",
-                "${workspaceFolder}/DNC.Reminder/Reminder.Cli/Reminder.Cli.csproj"
-            ],
-            "problemMatcher": "$tsc"
-        },
-        {
-            "label": "watch",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "watch",
-                "run",
-                "${workspaceFolder}/DNC.Reminder/Reminder.Cli/Reminder.Cli.csproj"
-            ],
-            "problemMatcher": "$tsc"
-        }
     ]
 }
