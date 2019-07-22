@@ -1,0 +1,3 @@
+[submodule "bar-event-sourcing"]
+	path = bar-event-sourcing
+	url = https://github.com/dnikolovv/bar-event-sourcing.git
