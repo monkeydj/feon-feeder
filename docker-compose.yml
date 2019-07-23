@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+  web_cms_dev:
+    image: ${CMS_IMG}
+    build:
+      dockerfile: Dockerfile
+      context: ./www.service.cms
+    container_name: web_cms_dev
+    volumes:
+      - ./www.service.cms:/var/www/html:rw
+      - /var/www/html/application/libraries/vendor
+    restart: always
+    ports:
+      - "8079:80"
+    environment:
+      # APP_ENV: development
+      APP_DB_HOST: db.transportme.dev.exe.com.vn
+      APP_DB_PORT: 9010
+      APP_DB_USERNAME: root
+      APP_DB_PASSWORD: root
+      APP_DB_NAME: master_db
+      APP_EMAIL_WESTERN_SYDNEY_UNI: an.nguyen@exe.com.vn
+  
