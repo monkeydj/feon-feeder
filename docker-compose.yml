@@ -1,23 +1,38 @@
 version: '3.3'
+
 services:
-  web_cms_dev:
-    image: ${CMS_IMG}
-    build:
-      dockerfile: Dockerfile
-      context: ./www.service.cms
-    container_name: web_cms_dev
-    volumes:
-      - ./www.service.cms:/var/www/html:rw
-      - /var/www/html/application/libraries/vendor
-    restart: always
-    ports:
-      - "8079:80"
+
+  mongo:
+    image: mongo:3
+    container_name: mongo
+    # restart: always
+    networks: 
+    - graylog-net
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.1
+    container_name: elasticsearch
+    # restart: always
     environment:
-      # APP_ENV: development
-      APP_DB_HOST: db.transportme.dev.exe.com.vn
-      APP_DB_PORT: 9010
-      APP_DB_USERNAME: root
-      APP_DB_PASSWORD: root
-      APP_DB_NAME: master_db
-      APP_EMAIL_WESTERN_SYDNEY_UNI: an.nguyen@exe.com.vn
-  
+      http.host: 0.0.0.0
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    networks: 
+    - graylog-net
+
+  graylog:
+    image: graylog/graylog:3.0
+    container_name: graylog
+    links: 
+    - mongo
+    - elasticsearch
+    ports: 
+    - 9000:9000
+    - 12201:12201
+    - 1514:1514
+    environment: 
+      GRAYLOG_HTTP_EXTERNAL_URI: http://127.0.0.1:9000/
+    networks: 
+    - graylog-net
+
+networks: 
+  graylog-net:
