@@ -1,3 +1,6 @@
 [submodule "bar-event-sourcing"]
 	path = bar-event-sourcing
 	url = https://github.com/dnikolovv/bar-event-sourcing.git
+[submodule "init-app"]
+	path = init-app
+	url = https://github.com/picanteverde/init.git
