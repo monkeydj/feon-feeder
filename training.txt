@@ -1,0 +1,47 @@
+specific skills:
+
+	git path:
+		basic:
+			- working model
+			- add, commit
+		intermediate:
+			- rm --cached, reset, revert & checkout
+			- rebase vs merge (default vs --no-ff), cherry-pick
+		advanced:
+			- reflog
+			- submodule
+
+	javascript path:
+		basic:
+		intermediate:
+		advanced:
+
+system knowledge:
+	- Client-Service model & Generic app life cycle
+	- REST API
+	- Design patterns & Antipatterns
+	- Concurrency & Parallel 
+	- ? Resource issues: race condition, deadlock, livelocks, starvation, and thrashing, ...
+	- ? Principles
+	- Architecture: Monolothic vs Microservice
+	- Multitenant application
+
+operation workflow: 
+	- git branching model: 70%
+	- devops philosophy
+	- Get familiar with Terminal / Linux Shell
+	- configuring server: Nginx, Apache
+	- server virtualization with Docker
+	- basic security overview: CA / X509, TLS/SSL
+
+resources:
+- 12factorapp.net
+- deviq.com
+- simplicable.com/new/top
+
+desires: 
+- problem solving (important topic)
+- system analysis & design (engineer mindset)
+
+exercise:
+re-analyze TM CMS

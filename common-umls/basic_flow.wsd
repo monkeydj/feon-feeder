@@ -1,0 +1,25 @@
+@startuml BasicFlow
+
+skinparam Handwritten true
+
+start
+
+:Load form view;
+
+if (Data Id is existed?) then (yes)
+    :Load data associated with Data Id;
+endif
+
+:User interact with form;
+
+:User clicks Save;
+
+if (Data Id is existed?) then (yes)
+    :Update Data info;
+else (no)
+    :Create a new Data;
+endif
+
+stop
+
+@enduml
