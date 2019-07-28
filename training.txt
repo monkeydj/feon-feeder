@@ -18,15 +18,17 @@ specific skills:
 
 system knowledge:
 	- Client-Service model & Generic app life cycle
-	- REST API
+	- REST API:
+		- restfulapi.net
+		- restapitutorial.com
 	- Design patterns & Antipatterns
-	- Concurrency & Parallel 
+	- Concurrency & Parallel
 	- ? Resource issues: race condition, deadlock, livelocks, starvation, and thrashing, ...
 	- ? Principles
 	- Architecture: Monolothic vs Microservice
 	- Multitenant application
 
-operation workflow: 
+operation workflow:
 	- git branching model: 70%
 	- devops philosophy
 	- Get familiar with Terminal / Linux Shell
@@ -39,7 +41,7 @@ resources:
 - deviq.com
 - simplicable.com/new/top
 
-desires: 
+desires:
 - problem solving (important topic)
 - system analysis & design (engineer mindset)
 
