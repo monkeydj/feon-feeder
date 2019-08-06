@@ -4,9 +4,6 @@
 [submodule "init-app"]
 	path = init-app
 	url = https://github.com/picanteverde/init.git
-[submodule "elb-log-analyzer"]
-	path = elb-log-analyzer
-	url = https://github.com/ozantunca/elb-log-analyzer.git
 [submodule "microservices-prototype"]
 	path = microservices-prototype
 	url = https://github.com/aramkoukia/microservices-prototype.git
