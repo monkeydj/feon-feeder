@@ -7,3 +7,6 @@
 [submodule "microservices-prototype"]
 	path = microservices-prototype
 	url = https://github.com/aramkoukia/microservices-prototype.git
+[submodule "elb-log-analyzer"]
+	path = elb-log-analyzer
+	url = https://github.com/ozantunca/elb-log-analyzer.git
