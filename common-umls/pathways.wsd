@@ -2,19 +2,39 @@
 
 ' hide empty description
 
-[*] --> AuthN
-[*] --> Basic
+state Security {
+    AuthN -> AuthZ
+}
 
 state Basic {
     [*] --> CRUD
-    CRUD -down-> transaction
-    transaction -> reporting
+    CRUD -down-> Transaction
+    Transaction -down-> Reporting
 }
 
-Basic -> i18n
+state Live_Data {
+    Realtime -> Notification
+    Realtime -left-> Streaming
+}
+
+Security -> CRUD
+CRUD -> Security
+
+CRUD -> I18n
+
 Basic -> Realtime
 
-AuthN -> Basic
-AuthN -down-> authZ
+Reporting -> Dashboard
+Realtime -> Dashboard
+
+' problem descriptions
+
+Realtime : e.g. GPS tracking
+Realtime : e.g. instant data updates
+
+Notification : Mobile devices, Webpush
+
+Dashboard : quick data statistics
+Dashboard : <i>nice to have</i>
 
 @enduml
