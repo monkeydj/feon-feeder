@@ -18,14 +18,15 @@ state Live_Data {
 Security -left> Basic
 Basic -> Security
 
+CRUD -> Migration_Seeding
 CRUD -> Pagination
 CRUD -> I18n
 CRUD -> Worker
 
 Basic -> Realtime
 
-Reporting -> Dashboard
-Realtime -> Dashboard
+Reporting -> Dashboard : simple data summary
+Realtime -> Dashboard : in a short time window
 
 ' problem descriptions
 
