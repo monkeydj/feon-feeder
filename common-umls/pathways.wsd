@@ -1,7 +1,5 @@
 @startuml
 
-' hide empty description
-
 state Security {
     AuthN -> AuthZ
 }
@@ -20,9 +18,9 @@ state Live_Data {
 Security -left> Basic
 Basic -> Security
 
+CRUD -> Pagination
 CRUD -> I18n
 CRUD -> Worker
-
 
 Basic -> Realtime
 
