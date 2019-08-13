@@ -21,6 +21,8 @@ Security -left> Basic
 Basic -> Security
 
 CRUD -> I18n
+CRUD -> Worker
+
 
 Basic -> Realtime
 
@@ -29,12 +31,17 @@ Realtime -> Dashboard
 
 ' problem descriptions
 
+CRUD : - CQRS pattern
+CRUD : - REST API
+
 Realtime : e.g. GPS tracking
-Realtime : e.g. instant data updates
+Realtime : e.g. instant data updates 
 
-Notification : Mobile devices, Webpush
+Notification : - Notify mobile devices
+Notification : - Webpush
+Notification : - 
 
-Dashboard : quick data statistics
 Dashboard : <i>nice to have</i>
+Dashboard : - quick data statistics
 
 @enduml
