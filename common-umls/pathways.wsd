@@ -17,8 +17,8 @@ state Live_Data {
     Realtime -left-> Streaming
 }
 
-Security -> CRUD
-CRUD -> Security
+Security -left> Basic
+Basic -> Security
 
 CRUD -> I18n
 
