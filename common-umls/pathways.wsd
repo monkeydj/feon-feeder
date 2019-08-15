@@ -30,15 +30,30 @@ Realtime -> Dashboard : in a short time window
 
 ' problem descriptions
 
+CRUD : - Single model modification
 CRUD : - CQRS pattern
 CRUD : - REST API
+
+Transaction : - Multiple abstract models
+Transaction : - Distributed
+Transaction : e.g. live gps
+Transaction : e.g. buying tickets
+Transaction : e.g. checking attendances
+
+Worker : - Background jpb
+Worker : - Scheduler / Cron
+
+AuthN : - JWT
+AuthN : - OAuth 2
+
+I18n : e.g. Gregorgian vs Buddism calendar
 
 Realtime : e.g. GPS tracking
 Realtime : e.g. instant data updates 
 
 Notification : - Notify mobile devices
 Notification : - Webpush
-Notification : - 
+' Notification : - 
 
 Dashboard : <i>nice to have</i>
 Dashboard : - quick data statistics
