@@ -30,12 +30,13 @@ Common -> Realtime
 Reporting -> Dashboard
 Realtime -> Dashboard
 
-' problem descriptions
-
-Common : practices
-Common : objectives
-Common : methodologies
-Common : addendum
+' structuring a problem 
+' Common : objective
+' Common : practices
+' Common : approaches
+' Common : questions
+' Common : understanding
+' Common : extra
 
 CRUD : - Single model modification
 CRUD : - CQRS pattern
