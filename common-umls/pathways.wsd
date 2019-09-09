@@ -1,0 +1,71 @@
+@startuml
+
+state Security {
+    AuthN -> AuthZ
+}
+
+state Common {
+    [*] -down-> Pagination
+    [*] -down-> CRUD
+    CRUD -down-> Transaction
+    Transaction -down-> Reporting
+}
+
+state Live_Data {
+    Realtime -down-> Notification
+    Realtime -left-> Streaming
+}
+
+Security -left-> Common
+Common -> Security
+
+Common -> Migration_Seeding
+Common -> I18n
+Common -> Worker
+
+Transaction -> Notification
+
+Common -> Realtime
+
+Reporting -> Dashboard
+Realtime -> Dashboard
+
+' structuring a problem 
+' Common : objective
+' Common : practices
+' Common : approaches
+' Common : questions
+' Common : understanding
+' Common : extra
+
+CRUD : - Single model modification
+CRUD : - CQRS pattern
+CRUD : - REST API
+
+Transaction : - Multiple abstract models
+Transaction : - Distributed
+Transaction : e.g. live gps
+Transaction : e.g. buying tickets
+Transaction : e.g. checking attendances
+
+Worker : - Background jpb
+Worker : - Scheduler / Cron
+
+AuthN : - JWT
+AuthN : - OAuth 2
+
+I18n : e.g. Gregorgian vs Buddism calendar
+
+Realtime : e.g. GPS tracking
+Realtime : e.g. instant data updates 
+
+Notification : - Notify mobile devices
+Notification : - Webpush
+' Notification : - 
+
+Dashboard : <i>nice to have</i>
+Dashboard : - quick data statistics
+Dashboard : - simple data summary
+Dashboard : - in a short time window
+
+@enduml
