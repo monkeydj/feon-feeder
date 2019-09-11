@@ -13,3 +13,6 @@
 [submodule "matrix-rotation"]
 	path = matrix-rotation
 	url = https://monkeydj@github.com/monkeydj/matrix-rotation
+[submodule "simple-booking"]
+	path = simple-booking
+	url = https://github.com/monkeydj/simple-booking.git
